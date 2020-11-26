@@ -1,0 +1,7 @@
+#include<stdio.h>
+int main()
+{
+printf("this is the poem of the air,\n"
+       "slowly in silent syllables recorded.\n");
+return 0;
+}
