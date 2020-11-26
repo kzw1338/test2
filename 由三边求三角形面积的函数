@@ -1,0 +1,9 @@
+#include<stdio.h>
+void prt_pan_area(double r)
+{
+printf(r=%f,S=%f\n",r,3.14159*r*r);
+int main()
+{
+prt_pan_area(2.3);
+return 0;
+}
