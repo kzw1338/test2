@@ -1,0 +1,8 @@
+void int_writer(int n)
+{
+printf("%d",n);
+}
+void int_writeln(int n)
+{
+printf("%d\n",n);
+}
