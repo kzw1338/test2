@@ -1,0 +1,7 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+printf("%f\n",sqrt((3+5+7)/2.0*(3+5+7/2.0-3)*(3+5+7/2.0-5)*(3+5+7/2.0-7));
+return 0;
+}
