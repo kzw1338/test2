@@ -1,0 +1,38 @@
+#include<stdio.h>
+void test_float()
+{
+long i;
+float sum=0.0,sum0=-1.0;
+for(i=1;sum!=sum0;++i)
+{
+sum0=sum;
+sum+=1/(float)i;
+}
+printf("float:%ld terms at %f\n",i-1,sum);
+}
+float distf(long n)
+{
+long i;
+float x=0.0;
+for (i=1;i<=n;i++)
+x+=1/float(i);
+return x;
+}
+long secondsf(float d)
+{
+long i;
+float x=0.0;
+for(i=1;x<d;i++)
+x+=1/float(i);
+return i-1;
+}
+
+int main()
+{
+float x;
+for(x=10.0;x<=20.5;x+=1.0)
+printf("%ld seconds,%f meters\n",secondsf(x),x);
+test_float();
+return 0;
+}
+
