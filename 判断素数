@@ -1,0 +1,7 @@
+int isprime(int n)
+{
+int m=2;
+for(;m*m<=n;++m)
+if(n%m==0) return 0;
+return 1;
+}
