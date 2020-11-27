@@ -1,0 +1,62 @@
+#include<stdio.h>
+int next(void);
+int getrange(void);
+int getnumber(int limit);
+int main()
+{
+int m,unknown,guess;
+if((m=getrange())<0) return 1;
+++m;
+do{
+unknown=rand()%m;
+while(1){
+if((guess=getnumber(m))<0){
+printf("too many errors.stop!");
+return 2;
+}
+if(guess>unknown)  printf("too big\n");
+else if(guess<unknown) printf("too small\n");
+else {
+printf("congratulation!you win!");
+break;
+}
+}while(next());
+printf("game over");
+return 0;
+}
+enum {ERRORNUM=5};
+int getrange(void){
+int i,n;
+for(i=0;i<ERRORNUM;++i){
+printf("choose a range [0,n].input n:");
+if(scanf("%d",&n)!=1||n<2||n>32767){
+printf("wrong number.need a number in 2~32767.\n");
+while(getchar()!='\n')
+;
+}
+else return n;
+}
+return -1;
+}
+int getnumber(int m){
+int i,n;
+for(i=0;i<ERRORNUM;++i){
+printf("your guess:");
+if(scanf("%d",&n)!=1)||n<0||n>=m){
+printf("wrong number.need a number in 0~%d.\n",m-1);
+while (getchar()!='\n')
+;
+}
+else return n;
+}
+return -1;
+}
+int next(void){
+int c;
+printf("next game?(y/n):");
+while(isspace(c=getchar()))
+;
+if(c=='y')   return 1;
+else return 0;
+}
+
