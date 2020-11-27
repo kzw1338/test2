@@ -1,0 +1,14 @@
+void moveone(char from,char to)
+{
+printf("%c-->%c\n",from,to);
+}
+void hanoi(int n,char from,char to,char by)
+{
+if(n==1)  moveone(from,to);
+else
+{
+hanoi(n-1,from,by,to);
+moveone(from,to);
+hanoi(n-1,by,to,from);
+}
+}
