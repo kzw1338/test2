@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+int c;
+int nd=0,nb=0,nl=0,nc=0,nn=0;
+while((c=getchar())!=EOF)
+switch(c)
+{
+case 'c':++nb;break;
+case'1':case'2':case'3':case'4':case'5':case'6':case'7':case'8':case'9':case'0':++nd;break;
+case'\n':++nl;break;
+case'{':case'}':++nc;break;
+default:++nn;break;
+}
+printf("spaces:%d,lines:%d,digits:%d",nb,nl,nd);
+printf("{ and }:%d,others:%d\n",nc,nn);
+return 0;
+}
