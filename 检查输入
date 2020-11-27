@@ -1,0 +1,6 @@
+printf("please enter an integer");
+while(scanf("%d",&n)!=1)
+{
+while(getchar()!='\n') ;
+printf("input incorrect.an integer again.");
+}
