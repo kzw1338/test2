@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<time.h>
+long fib(int n)
+{
+return n<=1? 1:fib(n-1)+fib(n-2);
+}
+int main()
+{
+double x;
+int n;
+for(n=35;n<46;++n)
+{
+x=clock();
+printf("Fad %d is %ld in ",n,fib(n));
+printf("%fs\n",(clock()-x)/CLOCKS_PER_SEC);
+}
+return 0;
+}
+
